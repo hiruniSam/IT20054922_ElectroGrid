@@ -59,7 +59,8 @@ public String insertCustomer(String NIC , String firstname,String lastname, Stri
 		con.close(); 
 		
 		String newCustomers = readCustomers(); 
-		output = "{\"status\":\"success\",\"data\":\""+newCustomers+"\"}"; 
+		output = "{\"status\":\"success\",\"data\":\""+
+		newCustomers+"\"}"; 
 	} 
 	
 	catch (Exception e) 
@@ -87,7 +88,8 @@ public String readCustomers()
 			
 			// Prepare the html table to be displayed
 			
-			output = "<table border=\"1\" class=\"table\"><tr><th>Customer ID</th>"
+			output = "<table border='1' class='table'>"
+					+ "<th>Customer ID</th>"
 					+ "<th>Customer NIC</th>"
 			 		+ "<th>Customer First Name</th>"
 			 		+ "<th>Customer Last Name</th>"
