@@ -81,6 +81,10 @@ public class customersAPI extends HttpServlet {
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		Map paras = getParasMap(request); 
+		 String output = custObj.deleteItem(paras.get("CustomerID").toString()); 
+		response.getWriter().write(output);
 	}
 	
 	
