@@ -12,7 +12,7 @@ public class Customer{
 				Class.forName("com.mysql.cj.jdbc.Driver"); 
 
 				//Provide the correct details: DBServer/DBName, username, password 
-				con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/itemdb", "root", ""); 
+				con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/usermanagement", "root", ""); 
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
