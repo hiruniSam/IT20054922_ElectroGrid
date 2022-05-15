@@ -65,7 +65,7 @@ public String insertCustomer(String NIC , String firstname,String lastname, Stri
 	
 	catch (Exception e) 
 	{ 
-		output = "{\"status\":\"error\", \"data\":\"Error while inserting the item.\"}"; 
+		output = "{\"status\":\"error\", \"data\":\"Error while inserting the Customer Details.\"}"; 
 		System.err.println(e.getMessage()); 
 	} 
 	return output; 
@@ -122,7 +122,7 @@ public String readCustomers()
 				 
 				 
 			// Add into the html table
-			output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='"+CustomerID+"'>"+ CustomerID+"</td>"; 
+			output += "<tr><td><input id='hidCustomerIDUpdate' name='hidCustomerIDUpdate' type='hidden' value='"+CustomerID+"'>"+ CustomerID+"</td>"; 
 			output += "<td>" + NIC + "</td>";
 			output += "<td>" + CustomerFirstName + "</td>";
 			output += "<td>" + CustomerLastName + "</td>";
@@ -205,7 +205,7 @@ public String updateCustomer(String CustomerID,String NIC , String firstname,Str
 
 //A method to delete the customer details
 
-public String deleteItem(String CustomerID){ 
+public String deleteCustomer(String CustomerID){ 
 
 	String output = ""; 
 	

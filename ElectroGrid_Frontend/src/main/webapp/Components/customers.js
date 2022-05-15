@@ -21,7 +21,7 @@ if (status != true)
  return; 
 }
 // If valid------------------------
-var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT"; 
+var type = ($("#hidCustomerIDSave").val() == "") ? "POST" : "PUT"; 
  $.ajax( 
  { 
  url : "customersAPI", 
@@ -44,7 +44,7 @@ if (status == "success")
  { 
  $("#alertSuccess").text("Successfully saved."); 
  $("#alertSuccess").show(); 
- $("#divItemsGrid").html(resultSet.data); 
+ $("#divCustomersGrid").html(resultSet.data); 
  
  } else if (resultSet.status.trim() == "error") 
  { 
@@ -60,7 +60,7 @@ if (status == "success")
  $("#alertError").text("Unknown error while saving.."); 
  $("#alertError").show(); 
  }
-$("#hidItemIDSave").val(""); 
+$("#hidCustomerIDSave").val(""); 
 $("#formCustomer")[0].reset(); 
 }
 
@@ -68,7 +68,7 @@ $("#formCustomer")[0].reset();
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 		{ 
-		$("#hidItemIDSave").val($(this).data("customerid")); 
+		$("#hidCustomerIDSave").val($(this).data("customerid")); 
 		 $("#NIC").val($(this).closest("tr").find('td:eq(1)').text()); 
 		 $("#CustomerFirstName").val($(this).closest("tr").find('td:eq(2)').text()); 
 		 $("#CustomerLastName").val($(this).closest("tr").find('td:eq(3)').text()); 
@@ -107,7 +107,7 @@ if (status == "success")
  { 
  $("#alertSuccess").text("Successfully deleted."); 
  $("#alertSuccess").show(); 
- $("#divItemsGrid").html(resultSet.data); 
+ $("#divCustomersGrid").html(resultSet.data); 
  } else if (resultSet.status.trim() == "error") 
  { 
  $("#alertError").text(resultSet.data); 

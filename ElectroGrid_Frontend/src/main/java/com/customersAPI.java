@@ -63,7 +63,7 @@ public class customersAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		Map paras = getParasMap(request); 
-		 String output = custObj.updateCustomer(paras.get("hidItemIDSave").toString(), 
+		 String output = custObj.updateCustomer(paras.get("hidCustomerIDSave").toString(), 
 				 							paras.get("NIC").toString(), 
 				 							paras.get("CustomerFirstName").toString(), 
 				 							paras.get("CustomerLastName").toString(), 
@@ -83,7 +83,7 @@ public class customersAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		Map paras = getParasMap(request); 
-		 String output = custObj.deleteItem(paras.get("CustomerID").toString()); 
+		 String output = custObj.deleteCustomer(paras.get("CustomerID").toString()); 
 		response.getWriter().write(output);
 	}
 	
