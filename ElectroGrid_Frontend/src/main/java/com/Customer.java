@@ -2,8 +2,12 @@ package com;
 
 import java.sql.*;
 
-//A common method to connect to the DB
+
+
 public class Customer{ 
+	
+	//A common method to connect to the DB
+	
 	private Connection connect(){ 
 		
 		Connection con = null; 
