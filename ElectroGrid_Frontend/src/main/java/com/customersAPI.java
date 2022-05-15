@@ -41,6 +41,7 @@ public class customersAPI extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		
 		String output =custObj.insertCustomer(request.getParameter("NIC"), 
 				   request.getParameter("CustomerFirstName"), 
 				   request.getParameter("CustomerLastName"), 
